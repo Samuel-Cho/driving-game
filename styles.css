@@ -11,6 +11,10 @@ body {
   transition-duration: 0.25s;
 }
 
+.east {
+  transform: rotate(0deg);
+}
+
 .north {
   transform: rotate(-90deg);
 }
