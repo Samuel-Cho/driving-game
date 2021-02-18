@@ -8,23 +8,17 @@ body {
 
 .race-car {
   height: 120px;
-}
-
-.east {
   transition-duration: 0.25s;
 }
 
 .north {
   transform: rotate(-90deg);
-  transition-duration: 0.25s;
 }
 
 .south {
   transform: rotate(90deg);
-  transition-duration: 0.25s;
 }
 
 .west {
   transform: rotate(180deg);
-  transition-duration: 0.25s;
 }
