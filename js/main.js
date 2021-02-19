@@ -28,4 +28,5 @@ function moveCar() {
     offsetX += 5;
     $car.style.left = offsetX + 'px';
   }
+  data.xCoord = offsetX;
 }
