@@ -4,11 +4,13 @@
 
 body {
   background-color: seagreen;
+  position: relative;
 }
 
 .race-car {
   height: 120px;
   transition-duration: 0.25s;
+  position: absolute;
 }
 
 .east {

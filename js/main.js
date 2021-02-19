@@ -1,6 +1,9 @@
 /* global data */
 
 var $car = document.querySelector('.race-car');
+var offsetX = 0;
+// var offsetY = 0;
+// var intervalID = null;
 
 window.addEventListener('keydown', function (event) {
   if (event.key === 'w') {
@@ -15,5 +18,15 @@ window.addEventListener('keydown', function (event) {
   } else if (event.key === 'd') {
     data.direction = 'east';
     $car.className = 'east race-car';
+  } else if (event.key === ' ') {
+    setInterval(moveCar, 16);
   }
 });
+
+function moveCar() {
+  if ($car.className === 'east race-car') {
+    offsetX += 5;
+    $car.style.left = offsetX + 'px';
+  }
+  data.xCoord = offsetX;
+}
