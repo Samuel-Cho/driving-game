@@ -20,6 +20,7 @@ window.addEventListener('keydown', function (event) {
     $car.className = 'east race-car';
   } else if (event.key === ' ') {
     setInterval(moveCar, 16);
+    data.engine = 'on';
   }
 });
 
