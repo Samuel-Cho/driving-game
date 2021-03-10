@@ -3,7 +3,7 @@
 var $car = document.querySelector('.race-car');
 var offsetX = 0;
 // var offsetY = 0;
-// var intervalID = null;
+var intervalID = null;
 
 window.addEventListener('keydown', function (event) {
   if (event.key === 'w') {
@@ -19,7 +19,13 @@ window.addEventListener('keydown', function (event) {
     data.direction = 'east';
     $car.className = 'east race-car';
   } else if (event.key === ' ') {
-    setInterval(moveCar, 16);
+    if (data.engine === 'off') {
+      intervalID = setInterval(moveCar, 16);
+      data.engine = 'on';
+    } else {
+      clearInterval(intervalID);
+      data.engine = 'off';
+    }
   }
 });
 
