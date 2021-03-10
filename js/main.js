@@ -2,7 +2,7 @@
 
 var $car = document.querySelector('.race-car');
 var offsetX = 0;
-// var offsetY = 0;
+var offsetY = 0;
 var intervalID = null;
 
 window.addEventListener('keydown', function (event) {
@@ -30,9 +30,19 @@ window.addEventListener('keydown', function (event) {
 });
 
 function moveCar() {
-  if ($car.className === 'east race-car') {
-    offsetX += 5;
+  if (data.direction === 'east') {
+    offsetX += 10;
     $car.style.left = offsetX + 'px';
+  } else if (data.direction === 'west') {
+    offsetX -= 10;
+    $car.style.left = offsetX + 'px';
+  } else if (data.direction === 'south') {
+    offsetY += 10;
+    $car.style.top = offsetY + 'px';
+  } else if (data.direction === 'north') {
+    offsetY -= 10;
+    $car.style.top = offsetY + 'px';
   }
   data.xCoord = offsetX;
+  data.yCoord = offsetY;
 }
