@@ -36,6 +36,9 @@ function moveCar() {
   } else if (data.direction === 'west') {
     offsetX -= 5;
     $car.style.left = offsetX + 'px';
+  } else if (data.direction === 'south') {
+    offsetY += 5;
+    $car.style.top = offsetY + 'px';
   }
   data.xCoord = offsetX;
   data.yCoord = offsetY;
