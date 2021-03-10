@@ -31,13 +31,16 @@ window.addEventListener('keydown', function (event) {
 
 function moveCar() {
   if (data.direction === 'east') {
-    offsetX += 5;
+    offsetX += 10;
     $car.style.left = offsetX + 'px';
   } else if (data.direction === 'west') {
-    offsetX -= 5;
+    offsetX -= 10;
     $car.style.left = offsetX + 'px';
   } else if (data.direction === 'south') {
-    offsetY += 5;
+    offsetY += 10;
+    $car.style.top = offsetY + 'px';
+  } else if (data.direction === 'north') {
+    offsetY -= 10;
     $car.style.top = offsetY + 'px';
   }
   data.xCoord = offsetX;
